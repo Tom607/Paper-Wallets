@@ -1,0 +1,451 @@
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* E L E M E N T S */
+
+html {
+  margin: 0;
+  transition-duration: 0.3s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  position: relative;
+  /* make it look decent enough */
+  background: #111111;
+  color: #fcfcfe;
+  font-family: 'Apercu Mono', sans-serif;
+  z-index: 1000;
+  font-size: 13px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  padding: 37px 0;
+}
+
+main {
+  padding: 100px 0 20px 0px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+
+/* T Y P O G R A P H Y*/
+
+h1,
+h2 {
+  font-family: 'Theinhardt';
+  font-weight: 100;
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+h3 {
+  font-family: 'Theinhardt';
+  font-weight: 100;
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+a:hover {
+  color: #f8c291;
+  text-decoration: none;
+}
+
+a:after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+a:hover:after {
+  width: 100%;
+  background: #f8c291;
+}
+
+/* M E N U */
+
+  #menuToggle {
+    display: block;
+    position: fixed;
+    top: 42px;
+    left: 15px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+  * Just a quick hamburger
+  */
+
+  #menuToggle span {
+    display: block;
+    width: 28px;
+    height: 1px;
+    margin-bottom: 8px;
+    position: relative;
+    background: #cdcdcd;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+  }
+
+  /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+
+  #menuToggle input:checked~span {
+    opacity: 1;
+    background: #232323;
+    transition: 0.5s;
+  }
+
+  /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+
+  #menu {
+    position: fixed;
+    width: calc(25% - 15px);
+    height: 100vh;
+    margin: -70px 0 0 -15px;
+    padding: 15px;
+    padding-top: 150px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  }
+
+  #menu li a {
+    padding: 5px 0;
+    font-size: 25px;
+    color: #111;
+    font-family: 'Theinhardt';
+  }
+
+  #menu li a:hover {
+    color: #555;
+  }
+
+  #menu li a:after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
+
+  #menu li a:hover:after {
+    width: 100%;
+    background: #555;
+  }
+
+  /*
+  * And let's slide it in from the left
+  */
+
+  #menuToggle input:checked~ul {
+    transform: none;
+  }
+
+  ::-moz-selection {
+    /* Code for Firefox */
+    background: #fff;
+  }
+
+  ::selection {
+    background: #fff;
+  }
+
+/* S T Y L E S */
+
+.dark {
+  color: #555;
+}
+
+.light {
+  color: #cdcdcd;
+}
+
+.font-normal {
+  font-weight: light;
+}
+
+.border-top {
+  border-top: #cdcdcd 1px solid;
+}
+
+.buffer-bottom {
+  padding-bottom: 100px;
+}
+
+.screen-height {
+  height: 100vh;
+}
+
+.email {
+  font-weight: 100;
+  color: #f8c291;
+  margin: 0 0 200px 0;
+}
+
+.logo {
+  font-family: 'Theinhardt';
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #fcfcfe;
+}
+
+span.line {
+  display: inline-block;
+}
+
+.hero {
+  padding: 50px 0 100px;
+}
+
+.intro {
+    padding: 100px 0;
+}
+
+.signup {
+  padding: 0 0 10px 0;
+}
+
+.info {
+  padding: 100px 0;
+}
+
+/* B A C K G R O U N D  P A T T E R N */
+
+  .background-pattern .container-fluid .row {
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    padding-bottom: 15px;
+    height: 100%;
+    z-index: -1000;
+  }
+
+  .background-pattern .col {
+    border-right: 1px solid #151515;
+    height: 100%;
+  }
+
+  .background-pattern .col:last-child {
+    border-right: none;
+  }
+
+/* E M A I L  S I G N - U P */
+
+  input {
+    transition-duration: 0.3s;
+  }
+
+  input[type=email] {
+    font-family: 'Theinhardt';
+    font-weight: 100;
+    font-size: 25px;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: none;
+    margin: 15px 0;
+    width: calc(50% - 15px);
+    color: #f8c291;
+  }
+
+  input[type=email]:hover {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fcfcfe;
+  }
+
+  input[type=email]:focus {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #fcfcfe;
+  }
+
+  input[type=submit] {
+    margin: 15px 0;
+    padding: 10px 0;
+    width: calc(40% - 15px);
+    font-family: 'Theinhardt';
+    font-weight: normal;
+    font-size: 14px;
+    background-color: #111;
+    border: solid 1px #333;
+    color: #333;
+  }
+
+  input[type=submit]:hover {
+    background-color: #111;
+    border: solid 1px #fcfcfe;
+    color: #fcfcfe;
+    font-weight: normal;
+  }
+
+  input[type=submit]:focus {
+    background-color: #f8c291;
+    color: #111;
+    border-color: #f8c291;
+    outline: 0;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus input:-webkit-autofill,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    border-bottom: solid 1px #333;
+    width: 100%;
+    -webkit-text-fill-color: #f8c291;
+    -webkit-box-shadow: 0 0 0px 1000px #111 inset;
+    box-shadow: 0 0 0px 1000px #111 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
+/* H E R O  I M A G E */
+
+/* group acts like a clearfix */
+.group {
+  height: 100vh;
+}
+.main-image {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  background: url('../images/cards-001.jpg') center no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  padding: 13% 0;
+}
+
+/* F O O T E R */
+
+footer {
+  position: relative;
+  bottom: 0;
+  padding: 50px 0 0 0;
+  height: 100px;
+  width: 100%;
+}
+
+.london {
+  font-family: 'Theinhardt';
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: none;
+  color: #555;
+}
+
+.copyright {
+  padding-top: 15px;
+    font-family: 'Theinhardt';
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: #555;
+}
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #111;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #fcfcfe;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f8c291;
+}
+
+/* R E S P O N S I V E */
+
+@media only screen and (max-width: 576px) {
+  header {
+    padding-top: 100px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  #menu {
+    width: 100vw;
+  }
+}
