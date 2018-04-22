@@ -38,80 +38,54 @@
   <title>Paper Wallets — Coming Soon</title>
 </head>
 
-<nav role="navigation">
-  <div id="menuToggle">
-    <!--
-    A fake / hidden checkbox is used as click reciever,
-    so you can use the :checked selector on it.
-    -->
-    <input type="checkbox" />
-
-    <!--
-    Some spans to act as a hamburger.
-    
-    They are acting like a real hamburger,
-    not that McDonalds stuff.
-    -->
-    <span></span>
-    <span></span>
-    <span></span>
-
-    <!--
-    Too bad the menu has to be inside of the button
-    but hey, it's pure CSS magic.
-    -->
-    <ul id="menu">
-      <li>
-        <h3 class="dark">Cards</h3>
-      </li>
-      <li>
-        <a href="./pw-001ltc.html">PW—001LTC 02.18</a>
-      </li>
-      <li>
-        <a href="#">PW—002 Coming Soon</a>
-      </li>
-      <li>
-        <a href="#">PW—003 Coming Soon</a>
-      </li>
-    
-      <li>
-        <h3 class="dark">Guides</h3>
-      </li>
-      <li>
-        <a href="./sending-guide.html">How it works</a>
-      </li>
-      <li>
-        <a href="./receiving-guide.html">Using my card</a>
-      </li>
-    
-      <li>
-        <h3 class="dark">Paper Wallets</h3>
-      </li>
-      <li>
-        <a href="./about.html">About Us</a>
-      </li>
-      <li>
-        <a href="./contact.html">Contact</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-
 <header>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-1">
-        <!-- space for menu -->
+    <div class="row align-items-start">
+      <nav role="navigation">
+        <div id="menuToggle">
+
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <ul id="menu">
+            <li>
+              <h4 class="dark">Shop</h4>
+            </li>
+            <li>
+              <a href="./pw-001ltc.html">PW—001LTC 02.18</a>
+            </li>
+
+
+            <li>
+              <h4 class="dark">Guides</h4>
+            </li>
+            <li>
+              <a href="./sending-guide.html">How it works</a>
+            </li>
+            <li>
+              <a href="./receiving-guide.html">Using my card</a>
+            </li>
+
+            <li>
+              <h4 class="dark">Paper Wallets</h4>
+            </li>
+            <li>
+              <a href="./about.html">About Us</a>
+            </li>
+            <li>
+              <a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="col-sm-2 offset-sm-1 logo">
+        <a class="dark logo" href="index.html">Paper_
+          <br>Wallets</a>
       </div>
-      <div class="col-2 logo">
-        <p>
-          <span class="line">Paper_</span>
-          <span class="line">Wallets</span>
-        </p>
-      </div>
-      <div class="col-3"></div>
-      <div class="col-3">
+      <div class="col-sm-3 offset-sm-3">
         <script type="text/javascript">
           crypt_multi_num_cur = "3";
           crypt_base_cur_0 = "Bitcoin (BTC)";
@@ -126,9 +100,17 @@
         <script type="text/javascript" src="./js/crypto.js"></script>
       </div>
     </div>
-    <div class="col-3">
-      <p class="london">Launching soon</p>
+    <div class="sub-menu">
+      <div class="col-sm-1">
+        <a href="#" class="top-links">Bag
+          <span>(1)</span>
+        </a>
+      </div>
+      <div class="col-sm-1">
+        <a href="#" class="top-links">Account</a>
+      </div>
     </div>
+
   </div>
   </div>
 </header>

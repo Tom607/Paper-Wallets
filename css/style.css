@@ -94,11 +94,23 @@ a {
 }
 
 a:hover {
+  color: #aaa;
+  text-decoration: none;
+}
+
+a .link {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+a .link:hover {
   color: #f8c291;
   text-decoration: none;
 }
 
-a:after {
+a .link:after {
   content: '';
   display: block;
   height: 1px;
@@ -107,7 +119,7 @@ a:after {
   transition: width .5s ease, background-color .5s ease;
 }
 
-a:hover:after {
+a .link:hover:after {
   width: 100%;
   background: #f8c291;
 }
@@ -305,6 +317,25 @@ span.line {
 
 .info {
   padding: 100px 0;
+}
+
+.cta {
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  font-family: 'Theinhardt';
+  font-weight: normal;
+  font-size: 14px;
+  background-color: #111;
+  border: solid 1px #aaa;
+  color: #aaa;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  color: #f8c291;
+  border: 1px solid #f8c291;
+  text-decoration: none;
 }
 
 /* B A C K G R O U N D  P A T T E R N */
