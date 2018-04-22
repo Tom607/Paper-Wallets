@@ -68,6 +68,10 @@ h2 {
   margin: 0 0 50px 0;
 }
 
+h1 {
+  font-size: 4.5rem;
+}
+
 h2 {
   font-size: 3.5rem;
   margin: 10px 0;
@@ -126,57 +130,25 @@ a .link:hover:after {
 
 /* M E N U */
 
-  #menuToggle {
-    display: block;
-    position: fixed;
-    top: 42px;
-    left: 15px;
-    z-index: 1;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-
-  #menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0;
-    /* hide this */
-    z-index: 2;
-    /* and place it over the hamburger */
-    -webkit-touch-callout: none;
-  }
-
-  /*
-  * Just a quick hamburger
-  */
+nav {
+  margin-left: 15px;
+  z-index: 20;
+}
 
   #menuToggle span {
     display: block;
     width: 28px;
     height: 1px;
     margin-bottom: 8px;
-    position: relative;
     background: #cdcdcd;
-    z-index: 1;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    transition: .3s ease-in-out;
+}
+
+  #menuToggle:hover span {
+    background: #f8c291;
   }
 
-  /* 
-  * Transform all the slices of hamburger
-  * into a crossmark.
-  */
-
-  #menuToggle input:checked~span {
-    opacity: 1;
-    background: #232323;
-    transition: 0.5s;
-  }
-
+ 
   /*
   * Make this absolute positioned
   * at the top left of the screen
@@ -184,18 +156,21 @@ a .link:hover:after {
 
   #menu {
     position: fixed;
+    top: 0;
     width: 100%;
     height: 100vh;
-    margin: -70px 0 0 -15px;
+    margin: 0 0 0 0;
     padding: 15px;
     padding-top: 150px;
     background: #ededed;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    z-index: 10;
+    transition: 1s ease-in-out;
+  }
+
+  .display-menu {
+    display: none;
   }
 
   #menu li a {
@@ -223,22 +198,7 @@ a .link:hover:after {
     background: #555;
   }
 
-  /*
-  * And let's slide it in from the left
-  */
 
-  #menuToggle input:checked~ul {
-    transform: none;
-  }
-
-  ::-moz-selection {
-    /* Code for Firefox */
-    background: #fff;
-  }
-
-  ::selection {
-    background: #fff;
-  }
 
 /* S T Y L E S */
 
@@ -304,7 +264,7 @@ span.line {
 }
 
 .hero {
-  padding: 50px 0 100px;
+  padding: 10% 0 5%;
 }
 
 .intro {
@@ -336,6 +296,10 @@ span.line {
   color: #f8c291;
   border: 1px solid #f8c291;
   text-decoration: none;
+}
+
+.page-content {
+  margin-top: 250px;
 }
 
 /* B A C K G R O U N D  P A T T E R N */
@@ -460,9 +424,7 @@ span.line {
   background-size: cover;
 }
 
-.hero {
-  padding: 13% 0;
-}
+
 
 /* F O O T E R */
 
@@ -525,7 +487,7 @@ footer {
 
 
 @media only screen and (min-width: 768px) {
-  #menu {
+  #menu li {
     width: calc(25% - 15px);
   }
 }
